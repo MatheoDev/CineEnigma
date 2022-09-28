@@ -7,14 +7,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class FormActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_form);
     }
 
     @Override
@@ -26,13 +25,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemThatWasClickedId = item.getItemId();
-        if (itemThatWasClickedId == R.id.action_create) {
-            Context context = MainActivity.this;
-            Class destinationActivity = FormActivity.class;
+        if (itemThatWasClickedId == R.id.action_home) {
+            Context context = FormActivity.this;
+            Class destinationActivity = MainActivity.class;
             Intent startChildActivityIntent = new Intent(context, destinationActivity);
             startActivity(startChildActivityIntent);
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

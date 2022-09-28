@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CineEnigma</string>
+    <string name="home">Home</string>
+    <string name="create">Create</string>
 </resources>
